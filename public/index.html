@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My App</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div id="vue-app">
+
+    <router-view></router-view>
+
+  </div>
+</body>
+</html>
+
+<template id="home-page">
+  <div class="vue-component">
+
+    <div>
+      <h2>Create a new post:</h2>
+      <div>
+        Title: <input type="text" name="title" v-model="title">
+      </div>
+      <div>
+        Body: <input type="text" name="body" v-model="body">
+      </div>
+      <div>
+        Image: <input type="file" v-on:change="uploadFile($event)">
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<template id="posts-show-page">
+  <div class="vue-component">
+    <img v-bind:src="image">
+  </div>
+</template>
+
+
+
+
+
+
+
+
+
+
